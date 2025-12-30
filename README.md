@@ -11,9 +11,34 @@
 
 ## セットアップ
 
-依存関係のインストール
+ライブラリのインストール
 
 ```bash
+# 依存関係の追加
+sudo apt install libomp-dev libboost-all-dev libmetis-dev \
+                 libfmt-dev libspdlog-dev \
+                 ros-jazzy-teleop-twist-keyboard
+
+# GTSAMのインストール
+git clone https://github.com/borglab/gtsam
+cd gtsam && git checkout 4.3a0
+mkdir build && cd build
+cmake .. -DGTSAM_BUILD_EXAMPLES_ALWAYS=OFF \
+         -DGTSAM_BUILD_TESTS=OFF \
+         -DGTSAM_WITH_TBB=OFF \
+         -DGTSAM_USE_SYSTEM_EIGEN=ON \
+         -DGTSAM_BUILD_WITH_MARCH_NATIVE=OFF
+make -j$(nproc)
+sudo make install
+
+# gtsam_pointsのインストール
+git clone https://github.com/koide3/gtsam_points
+mkdir gtsam_points/build && cd gtsam_points/build
+cmake .. -DBUILD_WITH_CUDA=OFF # CUDAある人はONにしよう
+make -j$(nproc)
+sudo make install
+
+sudo ldconfig
 ```
 
 本リポジトリのビルド
