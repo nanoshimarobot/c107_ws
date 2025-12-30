@@ -1,0 +1,9 @@
+repositories:
+    src/picomni_rover_ros:
+        type: git
+        url: https://github.com/eyr1n/picomni_rover_ros
+        branch: master
+    src/lidar_wheel_slam_demo:
+        type: git
+        url: https://github.com/nanoshimarobot/lidar_wheel_slam_demo
+        branch: master
