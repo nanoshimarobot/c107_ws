@@ -54,8 +54,24 @@ colcon build --symlink-install
 
 ## 実行
 
+ロボット通信モジュール，SLAMモジュールの起動
 ```bash
 cd ~/c107_ws
 . install/local_setup.bash
 ros2 launch c107_bringup slam_demo.launch
 ```
+
+別ターミナルでキーボード操作用ノードの起動(rosbag再生時は不要です)
+```bash
+ros2 run keyboard_controller keyboard_controller
+```
+
+## テストデータのdownload
+
+[ここから](https://drive.google.com/drive/folders/1v3QyJXd6Q2tEKzYespL7Z3T1UbK3b7xD?usp=sharing)テスト用rosbagデータをダウンロードできます．
+
+- rosbag2_2025_12_30-23_14_46
+  どこかの実験室
+
+- rosbag2_2025_12_30-23_14_46
+  友人宅で取った廊下データ
