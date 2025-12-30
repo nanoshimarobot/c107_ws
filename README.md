@@ -5,6 +5,8 @@
 本リポジトリは，コミックマーケット107 サークル「やる気出ないンズ」にて頒布された技術合同誌の記事「自走式3D LiDARによるお手軽Graph-based SLAM」で用いるROS 2ワークスペースです．  
 内容は不定期的に更新されます．
 
+![robot](robot.jpeg)
+
 ## ROS 2 install
 
 [こちら](https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html)を参考に，ROS 2 jazzyをインストール
