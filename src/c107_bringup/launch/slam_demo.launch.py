@@ -30,12 +30,6 @@ def generate_launch_description():
             executable="lidar_wheel_slam_demo",
             namespace="",
             output="screen",
-        ),
-        Node(
-            package="teleop_twist_keyboard",
-            executable="teleop_twist_keyboard",
-            namespace="",
-            output="screen",
         )
     ]
 
